@@ -1,24 +1,24 @@
 
 
-    const a = [
-        { a: 89, m2: 67 },
-        { m1: 5, m2: 0 },
-        { p: 4 },
-        { y: 9, e: -1 },
-      ];
+//     const a = [
+//         { a: 89, m2: 67 },
+//         { m1: 5, m2: 0 },
+//         { p: 4 },
+//         { y: 9, e: -1 },
+//       ];
       
-      let values1 = a.map((obj) => {
-        const keys = Object.keys(obj);
-        const values = Object.values(obj);
+//       let values1 = a.map((obj) => {
+//         const keys = Object.keys(obj);
+//         const values = Object.values(obj);
       
-        if (values.length === 2 && 'a' in obj && 'm2' in obj) {
-          for (let i = values[0]; i >= values[1]; i--) {
-            console.log(i);
-          }
-        }
-      });
+//         if (values.length === 2 && 'a' in obj && 'm2' in obj) {
+//           for (let i = values[0]; i >= values[1]; i--) {
+//             console.log(i);
+//           }
+//         }
+//       });
       
-      console.log(values1);
+//       console.log(values1);
       
     
 //     for(let i=0;i<a.length;i++){
@@ -42,3 +42,30 @@
 //     console.log(i);
 //    }
 // }
+// var arrangeCoins = function(n) {
+//   let coin = 0;
+//   let count = 0;
+
+//   while (coin + count + 1 <= n) {
+//       count++;
+//       coin += count;
+//       // console.log(coin,count);
+//   }
+//   return count;
+// };
+
+// let n = 5;
+// console.log(arrangeCoins(n)); 
+
+var pets = ['dog', 'chicken', 'cat', 'dog', 'chicken', 'chicken', 'rabbit'];
+
+let count= pets.reduce((acc,curr)=>{
+  if(!acc[curr]){
+    acc[curr]=1
+  }else{
+    acc[curr]++
+  }
+  return acc
+  
+},{})
+console.log(count);
